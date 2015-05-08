@@ -17,8 +17,8 @@ var stockPicker = function (stockPrices) {
 
   for (var i = 1; i < stockPrices.length; i++) {
     var profit = stockPrices[i] - minPrice;
-    maxProfit = profit > maxProfit ? profit : maxProfit;
-    minPrice = stockPrices[i] < minPrice ? stockPrices[i] : minPrice;
+    maxProfit = Math.max(profit, maxProfit);
+    minPrice = Math.min(stockPrices[i], minPrice);
   }
 
   return maxProfit;
