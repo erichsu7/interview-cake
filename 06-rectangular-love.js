@@ -50,8 +50,8 @@ var rect1 = {
 var rect2 = {
   "x": 3,
   "y": 2,
-  "width": 1,
-  "height": 1
+  "width": 7,
+  "height": 10
 }
 
 console.log(findIntersection(rect1, rect2));
